@@ -64,9 +64,9 @@ function flippedCardBack  (card) {
 
 
 for(i=0;i < quantidadeCartas;i++){
-    deck.innerHTML+=`<div id="card-${i}" class="card" onclick="flippedCard(this.id)"> 
-    <div class="face front-face"> <img class="frente" src="./images/front.png"/></div>
-    <div class="face back-face"><img class="verso" src="./images/${cartas[i]}"/></div>
+    deck.innerHTML+=`<div id="card-${i}" class="card" data-identifier="card" onclick="flippedCard(this.id)"> 
+    <div class="face front-face" data-identifier="front-face"> <img class="frente" src="./images/front.png"/></div>
+    <div class="face back-face" data-identifier="back-face"><img class="verso" src="./images/${cartas[i]}"/></div>
   </div>`
   }
 
