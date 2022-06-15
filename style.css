@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  background-color: #e5e5e5;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+
+  color: #75b79e;
+}
+
+.deck {
+  display: flex;
+  /*justify-content: space-around;*/
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  background-color: #a7e9af;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.back-face {
+  transform: rotateY(180deg);
+}
+
+.cardflipped .front-face {
+  transform: rotateY(-180deg);
+}
+.cardflipped .back-face {
+  transform: rotateY(0deg);
+}
+
+.frente {
+width: 50px;
+}
+
+.verso{
+  width: 50px;
+}
