@@ -1,9 +1,14 @@
+.body {
+  background-color: #EEF9BF;
+  max-width: 100%;
+}
+
 .container {
   position: relative;
-  background-color: #e5e5e5;
 }
 
 .titulo {
+  width: 100%;
   display: flex;
   justify-content: center;
 
@@ -59,9 +64,9 @@
 }
 
 .frente {
-width: 50px;
+width: 100px;
 }
 
 .verso{
-  width: 50px;
+  width: 100px;
 }
