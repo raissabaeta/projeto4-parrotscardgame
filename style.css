@@ -1,10 +1,6 @@
-.body {
-  background-color: #EEF9BF;
+body {
   max-width: 100%;
-}
-
-.container {
-  position: relative;
+  background-color: #EEF9BF;
 }
 
 .titulo {
