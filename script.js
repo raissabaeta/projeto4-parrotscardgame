@@ -42,9 +42,14 @@ function flippedCard(card) {
     } else {
       quantidadeCartasAbertas += 2;
     }
-    if (quantidadeCartas === quantidadeCartasAbertas) {
-      setTimeout(alert(`Fim de jogo, você ganhou em ${quantidadeJogadas} jogadas`), 3000)
-    }
+
+      if (quantidadeCartas === quantidadeCartasAbertas) {
+        function alertaFimJogo() {
+        alert(`Fim de jogo, você ganhou em ${quantidadeJogadas} jogadas.`)
+        }
+        setTimeout(alertaFimJogo, 1000)
+      }
+  
 
     cartasSelecionadas = [];
 
@@ -64,9 +69,9 @@ function flippedCardBack(card) {
 
 
 for (i = 0; i < quantidadeCartas; i++) {
-  deck.innerHTML += `<div id="card-${i}" class="card" data-identifier="card" onclick="flippedCard(this.id)"> 
-    <div class="face front-face" data-identifier="back-face"> <img class="frente" src="./images/front.png"/></div>
-    <div class="face back-face" data-identifier="front-face"><img class="verso" src="./images/${cartas[i]}"/></div>
+  deck.innerHTML += `<div id="card-${i}" class="card" onclick="flippedCard(this.id)"> 
+    <div class="face front-face"> <img class="frente" src="./images/front.png"/></div>
+    <div class="face back-face"><img class="verso" src="./images/${cartas[i]}"/></div>
   </div>`
 }
 
